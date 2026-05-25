@@ -1,0 +1,15 @@
+{
+  "name": "smart-code-translater",
+  "private": true,
+  "version": "1.0.0",
+  "description": "AI-powered smart code translator with Gemini API, authentication, code analysis, optimization, explanation, and AI mentor chatbot",
+  "scripts": {
+    "server:dev": "cd server && npm run dev",
+    "client:dev": "cd client && npm run dev",
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "test": "cd server && npm test && cd ../client && npm test",
+    "build": "cd client && npm run build"
+  },
+  "keywords": ["code-translator", "gemini-ai", "mern", "tailwindcss"],
+  "license": "MIT"
+}
