@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: smart-code-translater-api
+    runtime: node
+    repo: https://github.com/BeldhariSwapna/Smart-Code-Translator
+    branch: main
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CLIENT_URL
+        value: https://smart-code-translator.vercel.app
+      - key: MONGODB_URI
+        value: mongodb+srv://swapnareddy:yesh321swapna@cluster0.styrouw.mongodb.net/smartCodeTranslator?retryWrites=true&w=majority&appName=Cluster0
+      - key: JWT_SECRET
+        value: OftruDe1S3nljR4sGq6NZzmQx0EK2aJPHcho5AXigwML7TbIV9vWyBpkdF8YUC
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: GOOGLE_CLIENT_ID
+        value: 619338837335-bkt8klk1hfjdf6sg2uepvnkkrp3v2np5.apps.googleusercontent.com
+      - key: GEMINI_API_KEY
+        value: AIzaSyAJjenI_YxtZFIyktFmil7DswtwkGvsP2E
