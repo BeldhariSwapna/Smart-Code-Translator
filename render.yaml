@@ -2,8 +2,6 @@ services:
   - type: web
     name: smart-code-translater-api
     runtime: node
-    repo: https://github.com/BeldhariSwapna/Smart-Code-Translator
-    branch: main
     rootDir: server
     buildCommand: npm install
     startCommand: npm start
@@ -14,7 +12,7 @@ services:
       - key: CLIENT_URL
         value: https://smart-code-translator.vercel.app
       - key: MONGODB_URI
-        value: mongodb+srv://swapnareddy:yesh321swapna@cluster0.styrouw.mongodb.net/smartCodeTranslator?retryWrites=true&w=majority&appName=Cluster0
+        value: "mongodb+srv://swapnareddy:yesh321swapna@cluster0.styrouw.mongodb.net/smartCodeTranslator?retryWrites=true&w=majority&appName=Cluster0"
       - key: JWT_SECRET
         value: OftruDe1S3nljR4sGq6NZzmQx0EK2aJPHcho5AXigwML7TbIV9vWyBpkdF8YUC
       - key: JWT_EXPIRES_IN
