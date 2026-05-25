@@ -1,7 +1,7 @@
 import logger from "../utils/logger.js";
 
 const API_KEY = process.env.GEMINI_API_KEY;
-const MODEL_NAME = "gemini-3.5-flash";
+const MODEL_NAME = "gemini-2.0-flash";
 const API_URL = `https://generativelanguage.googleapis.com/v1/models/${MODEL_NAME}:generateContent`;
 
 const generateContent = async (prompt) => {
