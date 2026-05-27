@@ -18,6 +18,6 @@ services:
       - key: JWT_EXPIRES_IN
         value: 7d
       - key: GOOGLE_CLIENT_ID
-        value: 619338837335-bkt8klk1hfjdf6sg2uepvnkkrp3v2np5.apps.googleusercontent.com
+        value: 501530220126-pc9en4im9k3ib0418rjmrvdu6n0gvv23.apps.googleusercontent.com
       - key: GEMINI_API_KEY
         value: YOUR_GEMINI_API_KEY_HERE
