@@ -4,6 +4,7 @@ import helmet from "helmet";
 import compression from "compression";
 import morgan from "morgan";
 import * as Sentry from "@sentry/node";
+import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import routes from "./routes/index.js";
@@ -67,8 +68,8 @@ app.get("/api/health", (req, res) => {
 //Mount all API routes under /api
 app.use("/api", routes);
 
-// Serve frontend in production
-if (isProduction) {
+// Serve frontend in production (only if client/dist exists — e.g., single-server deploy)
+if (isProduction && fs.existsSync(path.resolve(__dirname, "../../client/dist"))) {
   const clientDist = path.resolve(__dirname, "../../client/dist");
   app.use(express.static(clientDist));
   app.get("/{*path}", (req, res) => {

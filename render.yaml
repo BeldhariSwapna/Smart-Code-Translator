@@ -20,4 +20,4 @@ services:
       - key: GOOGLE_CLIENT_ID
         value: 619338837335-bkt8klk1hfjdf6sg2uepvnkkrp3v2np5.apps.googleusercontent.com
       - key: GEMINI_API_KEY
-        value: AIzaSyCMXaPpj_klPKawOjiszWV3X7A-qiYyceA
+        value: YOUR_GEMINI_API_KEY_HERE
