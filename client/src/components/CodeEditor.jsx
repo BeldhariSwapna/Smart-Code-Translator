@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import Editor from "@monaco-editor/react";
 import { MONACO_LANGUAGE_MAP } from "../constants/languages.js";
 
@@ -8,6 +8,17 @@ function CodeEditor({ code, onChange, language, readOnly = false }) {
   const handleMount = (editor) => {
     editorRef.current = editor;
   };
+
+  useEffect(() => {
+    const editor = editorRef.current;
+    if (!editor) return;
+    const updateWrap = () => {
+      editor.updateOptions({ wordWrap: window.innerWidth < 768 ? "on" : "off" });
+    };
+    updateWrap();
+    window.addEventListener("resize", updateWrap);
+    return () => window.removeEventListener("resize", updateWrap);
+  }, []);
 
   return (
     <Editor

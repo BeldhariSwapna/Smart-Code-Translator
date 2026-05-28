@@ -68,7 +68,7 @@ function ChatBot() {
       </button>
 
       {/* Chat panel */}
-      <div className={`fixed bottom-24 right-6 z-50 w-[380px] max-w-[calc(100vw-2rem)] h-[520px] max-h-[calc(100vh-8rem)] bg-dark-card border border-gray-700/50 rounded-2xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 ${
+      <div className={`fixed bottom-24 right-6 z-50 w-[calc(100vw-2rem)] sm:w-[380px] md:w-[440px] h-[520px] max-h-[calc(100vh-8rem)] bg-dark-card border border-gray-700/50 rounded-2xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 ${
         open ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"
       }`}>
         {/* Header */}

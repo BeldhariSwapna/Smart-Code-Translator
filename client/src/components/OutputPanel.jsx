@@ -49,7 +49,7 @@ function OutputPanel({ result, action, targetLanguage, sourceCode, sourceLanguag
   if (action === "analyze") {
     return (
       <div className="p-6 space-y-6">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <InfoCard label="Time Complexity" value={result.timeComplexity} color="text-yellow-400" />
           <InfoCard label="Space Complexity" value={result.spaceComplexity} color="text-blue-400" />
         </div>
@@ -101,7 +101,7 @@ function OutputPanel({ result, action, targetLanguage, sourceCode, sourceLanguag
               readOnly
             />
           ) : (
-            <div className="h-full grid grid-cols-2 border-r border-gray-700/50">
+            <div className="h-full grid grid-cols-1 md:grid-cols-2 border-r border-gray-700/50">
               <div className="flex flex-col min-h-0 border-r border-gray-700/30">
                 <div className="text-xs text-gray-600 uppercase tracking-wider px-3 py-1.5 bg-dark-card border-b border-gray-700/50">Original</div>
                 <div className="flex-1 min-h-0">

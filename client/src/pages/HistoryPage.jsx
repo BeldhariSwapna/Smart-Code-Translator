@@ -117,7 +117,7 @@ function HistoryPage() {
   return (
     <div className="flex flex-1 min-h-0">
       {/* Sidebar */}
-      <div className={`w-full lg:w-[400px] shrink-0 flex-col lg:border-r border-gray-700/50 bg-dark-card ${selectedEntry ? "hidden lg:flex" : "flex"}`}>
+      <div className={`w-full md:w-[350px] lg:w-[400px] shrink-0 flex-col md:border-r border-gray-700/50 bg-dark-card ${selectedEntry ? "hidden md:flex" : "flex"}`}>
         <div className="flex items-center justify-between px-5 py-4 border-b border-gray-700/50">
           <h2 className="text-sm font-semibold text-gray-200 uppercase tracking-wider">History</h2>
           {entries.length > 0 && (
@@ -207,14 +207,14 @@ function HistoryPage() {
       </div>
 
       {/* Detail Panel */}
-      <div className={`flex-1 flex-col bg-dark-bg ${selectedEntry ? "flex" : "hidden lg:flex"}`}>
+      <div className={`flex-1 flex-col bg-dark-bg ${selectedEntry ? "flex" : "hidden md:flex"}`}>
         {selectedEntry ? (
           <>
             <div className="flex items-center justify-between px-5 py-3 bg-dark-card border-b border-gray-700/50">
               <div className="flex items-center gap-3">
                 <button
                   onClick={() => setSelectedEntry(null)}
-                  className="lg:hidden p-1.5 rounded-lg hover:bg-gray-800 text-gray-500 hover:text-gray-300 transition-all mr-1"
+                  className="md:hidden p-1.5 rounded-lg hover:bg-gray-800 text-gray-500 hover:text-gray-300 transition-all mr-1"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -238,7 +238,7 @@ function HistoryPage() {
               </div>
               <button
                 onClick={() => setSelectedEntry(null)}
-                className="hidden lg:block p-1.5 rounded-lg hover:bg-gray-800 text-gray-500 hover:text-gray-300 transition-all"
+                className="hidden md:block p-1.5 rounded-lg hover:bg-gray-800 text-gray-500 hover:text-gray-300 transition-all"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -277,7 +277,7 @@ function HistoryPage() {
                 )}
                 {selectedEntry.type === "analyze" && (
                   <div className="space-y-3">
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       <div className="bg-dark-card border border-yellow-500/20 rounded-xl p-4">
                         <p className="text-xs text-gray-500 mb-1">Time Complexity</p>
                         <p className="text-xl font-bold font-mono text-yellow-400">{selectedEntry.output?.timeComplexity}</p>

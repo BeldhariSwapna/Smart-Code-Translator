@@ -205,9 +205,9 @@ function HomePage() {
       </div>
 
       {/* Main content */}
-      <div className="flex-1 flex flex-col lg:flex-row min-h-0">
+      <div className="flex-1 flex flex-col md:flex-row min-h-0">
         {/* Source panel */}
-        <div className="flex-1 flex flex-col min-w-0 lg:border-r border-gray-700/50">
+        <div className="flex-1 flex flex-col min-w-0 md:border-r border-gray-700/50">
           <div className="flex items-center gap-2 px-4 py-2 bg-dark-card border-b border-gray-700/50">
             <LanguageSelector value={sourceLanguage} onChange={handleSourceChange} />
             <button
@@ -238,7 +238,7 @@ function HomePage() {
         </div>
 
         {/* Swap / Arrow */}
-        <div className="hidden lg:flex items-center justify-center w-10 shrink-0 bg-dark-card border-r border-gray-700/50">
+        <div className="hidden md:flex items-center justify-center w-10 shrink-0 bg-dark-card border-r border-gray-700/50">
           {activeAction === "translate" ? (
             <button
               onClick={handleSwap}
@@ -257,7 +257,7 @@ function HomePage() {
         </div>
         {/* Mobile swap button */}
         {activeAction === "translate" && (
-          <div className="flex lg:hidden items-center justify-center py-2 bg-dark-card border-b border-gray-700/50">
+          <div className="flex md:hidden items-center justify-center py-2 bg-dark-card border-b border-gray-700/50">
             <button
               onClick={handleSwap}
               className="flex items-center gap-2 px-4 py-1.5 rounded-lg bg-gray-800 text-gray-400 hover:text-accent text-xs transition-all"
@@ -271,7 +271,7 @@ function HomePage() {
         )}
 
         {/* Output panel */}
-        <div className="flex-1 flex flex-col min-w-0 border-t lg:border-t-0 border-gray-700/50">
+        <div className="flex-1 flex flex-col min-w-0 border-t md:border-t-0 border-gray-700/50">
           <div className="flex items-center justify-between px-4 py-2 bg-dark-card border-b border-gray-700/50">
             <div className="flex items-center gap-2">
               {activeAction === "translate" ? (
